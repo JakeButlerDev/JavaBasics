@@ -5,7 +5,11 @@ public class Main {
         String firstName = "Jake";
         String lastName = "Butler";
 
-        String generatedFullName = NameGenerator.generateFullName("Lionel", "Messi");
+        NameGenerator nameGen = new NameGenerator();
+        // If not static, must create an instance of that class
+        // If the method is static, you can just call the class
+
+        String generatedFullName = nameGen.generateFullName("Lionel", "Messi");
         System.out.println(generatedFullName);
     }
 }
