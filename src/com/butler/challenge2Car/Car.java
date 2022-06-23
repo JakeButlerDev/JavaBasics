@@ -39,8 +39,8 @@ public class Car  {
         this.gasTankPercent = gasTankPercent;
     }
 
-    public void toCarString() {
-        System.out.println("Make:" + getMake() + " " + "Model:" + getModel() + " " + "mileage:" + getMileage() + " " + "gasTankPercent:" + getGasTankPercent());
+    public String toCarString() {
+        return ("Make:" + getMake() + " " + "Model:" + getModel() + " " + "mileage:" + getMileage() + " " + "gasTankPercent:" + getGasTankPercent());
     }
 
 

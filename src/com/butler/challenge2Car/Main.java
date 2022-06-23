@@ -16,6 +16,7 @@ public class Main {
         Car car2 = new Car();
         Car car3 = new Car();
 
+
         car1.setMake("Camaro2SS");
         car1.setModel("Chevy");
         car1.setMileage(10000);
@@ -31,8 +32,11 @@ public class Main {
         car3.setMileage(100);
         car3.setGasTankPercent(0.90F);
 
-        car1.toCarString();
-        car2.toCarString();
-        car3.toCarString();
+        String[] cars = { car1.toCarString(), car2.toCarString(), car3.toCarString() };
+        for (int i = 0; i < cars.length; i++) {
+            System.out.println(cars[i]);
+        }
+//        car2.toCarString();
+//        car3.toCarString();
     }
 }
