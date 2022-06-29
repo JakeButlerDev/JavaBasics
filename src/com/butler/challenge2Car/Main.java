@@ -12,30 +12,30 @@ public class Main {
 //        System.out.println(car3);
 
         // BONUS
-        Car car1 = new Car();
-        Car car2 = new Car();
-        Car car3 = new Car();
-
-
-        car1.setMake("Camaro2SS");
-        car1.setModel("Chevy");
-        car1.setMileage(10000);
-        car1.setGasTankPercent(0.10F);
-
-        car2.setMake("Mustang GT");
-        car2.setModel("Ford");
-        car2.setMileage(30000);
-        car2.setGasTankPercent(0.50F);
-
-        car3.setMake("Hellcat");
-        car3.setModel("Dodge");
-        car3.setMileage(100);
-        car3.setGasTankPercent(0.90F);
-
-        String[] cars = { car1.toCarString(), car2.toCarString(), car3.toCarString() };
-        for (int i = 0; i < cars.length; i++) {
-            System.out.println(cars[i]);
-        }
+//        Car car1 = new Car();
+//        Car car2 = new Car();
+//        Car car3 = new Car();
+//
+//
+//        car1.setMake("Camaro2SS");
+//        car1.setModel("Chevy");
+//        car1.setMileage(10000);
+//        car1.setGasTankPercent(0.10F);
+//
+//        car2.setMake("Mustang GT");
+//        car2.setModel("Ford");
+//        car2.setMileage(30000);
+//        car2.setGasTankPercent(0.50F);
+//
+//        car3.setMake("Hellcat");
+//        car3.setModel("Dodge");
+//        car3.setMileage(100);
+//        car3.setGasTankPercent(0.90F);
+//
+//        String[] cars = { car1.toString(), car2.toString(), car3.toString() };
+//        for (int i = 0; i < cars.length; i++) {
+//            System.out.println(cars[i]);
+//        }
 //        car2.toCarString();
 //        car3.toCarString();
     }

@@ -7,12 +7,12 @@ public class Car  {
     private int mileage;
     private float gasTankPercent;
 
-//    public Car(String make, String model, int mileage, float gasTankPercent) {
-//        this.make = make;
-//        this.model = model;
-//        this.mileage = mileage;
-//        this.gasTankPercent = gasTankPercent;
-//    }
+    public Car(String make, String model, int mileage, float gasTankPercent) {
+        this.make = make;
+        this.model = model;
+        this.mileage = mileage;
+        this.gasTankPercent = gasTankPercent;
+    }
     // BONUS
     // Define Getters
     public String getMake() {
@@ -39,7 +39,8 @@ public class Car  {
         this.gasTankPercent = gasTankPercent;
     }
 
-    public String toCarString() {
+    @Override
+    public String toString() {
         return ("Make:" + getMake() + " " + "Model:" + getModel() + " " + "mileage:" + getMileage() + " " + "gasTankPercent:" + getGasTankPercent());
     }
 

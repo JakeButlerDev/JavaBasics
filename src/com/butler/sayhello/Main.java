@@ -16,7 +16,7 @@ public class Main {
         // Ask for input
         System.out.println("Enter your name: ");
         // Assign input to field
-        String name = scanner.next();
+        String name = scanner.nextLine();
         // Output statement
         System.out.println("Hello, nice to meet you " + name.trim());
     }
