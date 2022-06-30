@@ -41,7 +41,7 @@ public class Car  {
 
     @Override
     public String toString() {
-        return ("Make:" + getMake() + " " + "Model:" + getModel() + " " + "mileage:" + getMileage() + " " + "gasTankPercent:" + getGasTankPercent());
+        return ("Make:" + getMake() + " " + "Model:" + getModel() + " " + "mileage:" + getMileage() + " " + "gasTankPercent:" + getGasTankPercent()*100 + "%");
     }
 
 
