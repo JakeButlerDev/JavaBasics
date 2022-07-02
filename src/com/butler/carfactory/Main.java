@@ -19,7 +19,7 @@ public class Main {
 //        In your output <owner>, <make>, and <model> should be replaced by the data received from the user.
 
 
-                Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter the following details of your car: \n");
 
         System.out.print("Enter make below \n Make: ");
