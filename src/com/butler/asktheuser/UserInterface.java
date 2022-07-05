@@ -14,66 +14,159 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-//    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Quiz jakeQuiz = new Quiz(askUserAge(), askBirthYear(), askDesiredIncome(), askHourlyRate(), askAmznCap(), askMath(), askBoolean(), askRoleModel());
+//        //BYTE
+//        askUserAge();
+//        //SHORT
+//        askBirthYear();
+//        //INT
+//        askDesiredIncome();
+//        //FLOAT
+//        askHourlyRate();
+//        //LONG
+//        askAmznCap();
+//        //DOUBLE
+//        askMath();
+//        //BOOLEAN
+//        askBoolean();
+//        //STRING
+//        askRoleModel();
+
+//        Scanner scanner = new Scanner(System.in);
 
         // BYTE
+//        System.out.print("What is your age?\n Age: ");
+//        byte userAge = scanner.nextByte();
+//        System.out.println("Your age is " + userAge + ".");
+//        scanner.nextLine();
+
+        // SHORT
+//        System.out.print("What year were you born?\n Year: ");
+//        short birthYear = scanner.nextShort();
+//        System.out.println("You were born in " + birthYear + ".");
+//        scanner.nextLine();
+
+        // INT
+//        System.out.print("What would you like your annual income to be?\n Income: ");
+//        int annualIncome = scanner.nextInt();
+//        System.out.println("Your desired annual income is " + annualIncome + ".");
+//        scanner.nextLine();
+
+        // FLOAT
+//        System.out.print("What is your hourly pay rate?\n Pay rate: ");
+//        float hourlyRate = scanner.nextFloat();
+//        System.out.println("Your hourly rate is: $" + hourlyRate + ".");
+//        scanner.nextLine();
+
+        // LONG
+//        System.out.println("What is the current market cap of Amazon?\n Market cap: ");
+//        long amznMarketCap = scanner.nextLong();
+//        System.out.println("The current market cap of Amazon is " + amznMarketCap + ".");
+//        scanner.nextLine();
+
+//        // DOUBLE
+//        System.out.println("What is 11 divided by 3? \n Answer: ");
+//        double mathAnswer = scanner.nextDouble();
+//        System.out.println("11 divided by 3 equals " + mathAnswer + ".");
+//        scanner.nextLine();
+
+        // BOOLEAN
+//        System.out.println("True or false, you have a dog.\n True/False: ");
+//        boolean userDog = scanner.nextBoolean();
+//        if (userDog == true)
+//            System.out.println("True, you have a dog.");
+//        else
+//            System.out.println("False, you do not have a dog.");
+
+        // STRING
+//        System.out.println("Who is your role model?\n Role Model: ");
+//        String roleModel = scanner.nextLine().trim();
+//        System.out.println("Your role model is " + roleModel + ".");
+
+//        askUserName();
+    }
+
+//    private static void askUserName() {   // DONE IN CLASS
+//        System.out.print("What is your name? \n Name: ");
+//        String userName = scanner.nextLine();
+//        System.out.println("Your name: " + userName);
+//    }
+//
+    private static byte askUserAge() {
         System.out.print("What is your age?\n Age: ");
         byte userAge = scanner.nextByte();
         System.out.println("Your age is " + userAge + ".");
         scanner.nextLine();
+        return userAge;
+    }
 
-        // SHORT
+    private static short askBirthYear() {
         System.out.print("What year were you born?\n Year: ");
         short birthYear = scanner.nextShort();
         System.out.println("You were born in " + birthYear + ".");
+        if (birthYear <= 1900)
+            System.out.println("Wow, you ain't no spring chicken!");
+        else if (birthYear <= 1950)
+            System.out.println("Don't you miss the good old days?");
+        else
+            System.out.println("It's all downhill from here...");
         scanner.nextLine();
+        return birthYear;
+    }
 
-        // INT
+    private static int askDesiredIncome() {
         System.out.print("What would you like your annual income to be?\n Income: ");
         int annualIncome = scanner.nextInt();
         System.out.println("Your desired annual income is " + annualIncome + ".");
+        if (annualIncome <= 50_000)
+            System.out.println("Come on, shoot higher!");
+        else if (annualIncome >= 200_000)
+            System.out.println("Okay, dial it back a bit.");
         scanner.nextLine();
+        return annualIncome;
+    }
 
-        // FLOAT
+    private static float askHourlyRate() {
         System.out.print("What is your hourly pay rate?\n Pay rate: ");
         float hourlyRate = scanner.nextFloat();
         System.out.println("Your hourly rate is: $" + hourlyRate + ".");
         scanner.nextLine();
+        return hourlyRate;
+    }
 
-        // LONG
+    private static long askAmznCap() {
         System.out.println("What is the current market cap of Amazon?\n Market cap: ");
         long amznMarketCap = scanner.nextLong();
         System.out.println("The current market cap of Amazon is " + amznMarketCap + ".");
         scanner.nextLine();
+        return amznMarketCap;
+    }
 
-        // DOUBLE
+    private static double askMath() {
         System.out.println("What is 11 divided by 3? \n Answer: ");
         double mathAnswer = scanner.nextDouble();
         System.out.println("11 divided by 3 equals " + mathAnswer + ".");
         scanner.nextLine();
+        return mathAnswer;
+    }
 
-        // BOOLEAN
+    private static boolean askBoolean() {
         System.out.println("True or false, you have a dog.\n True/False: ");
         boolean userDog = scanner.nextBoolean();
         if (userDog == true)
             System.out.println("True, you have a dog.");
         else
             System.out.println("False, you do not have a dog.");
+        return userDog;
+    }
 
-        // STRING
+    private static String askRoleModel() {
         System.out.println("Who is your role model?\n Role Model: ");
         String roleModel = scanner.nextLine().trim();
         System.out.println("Your role model is " + roleModel + ".");
-
-//        askUserName();
+        return roleModel;
     }
-
-//    private static void askUserName() {
-//        System.out.print("What is your name? \n Name: ");
-//        String userName = scanner.nextLine();
-//        System.out.println("Your name: " + userName);
-//    }
 }
