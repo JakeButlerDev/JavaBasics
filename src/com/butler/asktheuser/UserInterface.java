@@ -156,6 +156,7 @@ public class UserInterface {
     private static boolean askBoolean() {
         System.out.println("True or false, you have a dog.\n True/False: ");
         boolean userDog = scanner.nextBoolean();
+        scanner.nextLine();
         if (userDog == true)
             System.out.println("True, you have a dog.");
         else
