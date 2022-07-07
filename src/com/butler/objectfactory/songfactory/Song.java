@@ -22,6 +22,7 @@ public class Song {
         this.seconds = seconds;
     }
 
+    // GETTERS
     public String getTitle() {
         return title;
     }

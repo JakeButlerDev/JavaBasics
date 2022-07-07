@@ -19,6 +19,7 @@ public class Airplane {
         this.isFlying = isFlying;
     }
 
+    // GETTERS
     public String getModelName() {
         return modelName;
     }
@@ -45,25 +46,14 @@ public class Airplane {
 
     @Override
     public String toString() {
-        return "Airplane{" +
-                "modelName='" + modelName + '\'' +
-                ", tailNumber='" + tailNumber + '\'' +
-                ", passengerCap=" + passengerCap +
-                ", marketValue=" + marketValue +
-                ", gasTankPercent=" + gasTankPercent +
-                ", isFlying=" + isFlying +
-                '}';
+        final StringBuilder sb = new StringBuilder("Airplane{");
+        sb.append("modelName='").append(modelName).append('\'');
+        sb.append(", tailNumber='").append(tailNumber).append('\'');
+        sb.append(", passengerCap=").append(passengerCap);
+        sb.append(", marketValue=").append(marketValue);
+        sb.append(", gasTankPercent=").append(gasTankPercent);
+        sb.append(", isFlying=").append(isFlying);
+        sb.append('}');
+        return sb.toString();
     }
-
-    //    public String toString() {
-//        final StringBuilder sb = new StringBuilder("Airplane{");
-//        sb.append("modelName='").append(modelName).append('\'');
-//        sb.append(", tailNumber='").append(tailNumber).append('\'');
-//        sb.append(", passengerCap=").append(passengerCap);
-//        sb.append(", marketValue=").append(marketValue);
-//        sb.append(", gasTankPercent=").append(gasTankPercent);
-//        sb.append(", isFlying=").append(isFlying);
-//        sb.append('}');
-//        return sb.toString();
-//    }
 }

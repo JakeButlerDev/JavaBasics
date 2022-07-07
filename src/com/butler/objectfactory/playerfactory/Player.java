@@ -19,7 +19,7 @@ public class Player {
         this.assists = assists;
         this.isInjured = isInjured;
     }
-
+    // GETTERS
     public String getPlayerName() {
         return playerName;
     }
@@ -42,5 +42,18 @@ public class Player {
 
     public boolean isInjured() {
         return isInjured;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Player{");
+        sb.append("playerName='").append(playerName).append('\'');
+        sb.append(", club='").append(club).append('\'');
+        sb.append(", totalPoints=").append(totalPoints);
+        sb.append(", goals=").append(goals);
+        sb.append(", assists=").append(assists);
+        sb.append(", isInjured=").append(isInjured);
+        sb.append('}');
+        return sb.toString();
     }
 }

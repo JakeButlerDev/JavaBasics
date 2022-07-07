@@ -20,6 +20,7 @@ public class Club {
         this.stadiumCap = stadiumCap;
     }
 
+    // GETTERS
     public String getName() {
         return name;
     }

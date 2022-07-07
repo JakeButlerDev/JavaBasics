@@ -36,10 +36,12 @@ public class UI {
         System.out.println("How many players play for the club?");
         byte players = scanner.nextByte();
         scanner.nextLine();
+        // Create instance of StringBuilder Class
         StringBuilder playerList = new StringBuilder();
         for (int i = 0; i < players; i++) {
                 System.out.println("What is this player's name?");
                 String player = scanner.nextLine();
+                // Entered player stored as new String in list
                 playerList.append(player);
                 if (player.trim().equals(""))
                     System.out.println("Enter a valid name.");
