@@ -30,6 +30,23 @@ public class UI {
         }
     }
 
+    public static StringBuilder readStringList() {
+        // Could this be done with a Stack??    https://www.geeksforgeeks.org/stack-class-in-java/
+        // Or String Builder
+        System.out.println("How many players play for the club?");
+        byte players = scanner.nextByte();
+        scanner.nextLine();
+        StringBuilder playerList = new StringBuilder();
+        for (int i = 0; i < players; i++) {
+                System.out.println("What is this player's name?");
+                String player = scanner.nextLine();
+                playerList.append(player);
+                if (player.trim().equals(""))
+                    System.out.println("Enter a valid name.");
+            }
+        return playerList;
+    }
+
     public static boolean readBoolean(String question) {
         while (true) {
             try  {
@@ -59,5 +76,54 @@ public class UI {
             }
 
         }
+    }
+
+    public static short readShort(String question, short min, short max) {
+        while (true) {
+            try  {
+                System.out.print(question + "\n("+min+"-"+max+"): ");
+                short input =  scanner.nextShort();
+                scanner.nextLine();
+                if (input <= max && input >= min)
+                    return input;
+            } catch (Exception exception) {
+                System.out.println("Input must be between " + min + " and " + max + ".");
+                scanner.nextLine();
+            }
+
+        }
+    }
+
+    public static double readDouble(String question, double min, double max) {
+        while (true) {
+            try  {
+                System.out.print(question + "\n("+min+"-"+max+"): ");
+                double input =  scanner.nextDouble();
+                scanner.nextLine();
+                if (input <= max && input >= min)
+                    return input;
+            } catch (Exception exception) {
+                System.out.println("Input must be between " + min + " and " + max + ".");
+                scanner.nextLine();
+            }
+
+        }
+    }
+
+    public static byte readByte(String question, byte min, byte max) {
+        while (true) {
+            try {
+                System.out.print(question + "\n(" + min + "-" + max + "): ");
+                byte input = scanner.nextByte();
+                scanner.nextLine();
+                if (input <= max && input >= min)
+                    return input;
+            } catch (Exception exception) {
+                System.out.println("Input must be between " + min + " and " + max + ".");
+                scanner.nextLine();
+            }
+
+        }
+
     }
 }
