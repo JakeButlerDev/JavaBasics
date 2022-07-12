@@ -21,18 +21,36 @@ public class UI {
 //        } else return input;
 //    }
 
+    public static char readChar(String question) {
+        while (true) {          // Incremental looping
+            System.out.println(question);
+            String input = scanner.nextLine().trim();
+            if (input.length() == 1)
+                return input.charAt(0);
+            else if (input.equals("")) {
+                System.out.println("\nYou can not leave input blank.");
+            } else {
+                System.out.println("\nYou must only input one character.");
+            }
+        }
+    }
+
+
     public static String readString(String question) {
         while (true) {          // Incremental looping
             System.out.println(question);
-            String input = scanner.nextLine();
-            if (!input.trim().equals(""))
+            String input = scanner.nextLine().trim();
+            if (!input.equals("")) {
                 return input;
+            }
+            }
         }
-    }
+
 
     public static StringBuilder readStringList() {
         // Could this be done with a Stack??    https://www.geeksforgeeks.org/stack-class-in-java/
         // Or String Builder
+        // Try ArrayList next time
         System.out.println("How many players play for the club?");
         byte players = scanner.nextByte();
         scanner.nextLine();
@@ -46,6 +64,7 @@ public class UI {
                 if (player.trim().equals(""))
                     System.out.println("Enter a valid name.");
             }
+        // ERROR HANDLING?? DEVELOP
         return playerList;
     }
 
@@ -128,4 +147,38 @@ public class UI {
         }
 
     }
+
+    public static long readLong(String question, long min, long max) {
+        while (true) {
+            try  {
+                System.out.print(question + "\n("+min+"-"+max+"): ");
+                long input =  scanner.nextLong();
+                scanner.nextLine();
+                if (input <= max && input >= min)
+                    return input;
+            } catch (Exception exception) {
+                System.out.println("Input must be between " + min + " and " + max + ".");
+                scanner.nextLine();
+            }
+
+        }
+    }
+
+    public static float readFloat(String question, float min, float max) {
+        while (true) {
+            try  {
+                System.out.print(question + "\n("+min+"-"+max+"): ");
+                float input =  scanner.nextFloat();
+                scanner.nextLine();
+                if (input <= max && input >= min)
+                    return input;
+            } catch (Exception exception) {
+                System.out.println("Input must be between " + min + " and " + max + ".");
+                scanner.nextLine();
+            }
+
+        }
+    }
+
+
 }

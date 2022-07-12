@@ -2,12 +2,59 @@ package com.butler.objectfactory.airplanefactory;
 
 import com.butler.objectfactory.UI;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        ArrayList<Airplane> hanger = new ArrayList<>();
+
+
         // Welcome message
         System.out.println("Welcome to create-your-airplane!\n\n");
         System.out.println("Note: all answers must be logical...\n");
+
+        while (true) {
+            // MENU
+            System.out.println("\nMENU\n" + "_".repeat(20));
+            System.out.println("1) Create a plane");
+            System.out.println("2) Show hanger");
+            System.out.println("3) Exit the program");
+
+
+            byte menuChoice = UI.readByte("Choose an option: ", (byte) 1, (byte) 3);
+            if (menuChoice == 3)
+                break;
+            else if (menuChoice == 2) {
+                if (hanger.size() == 0) {
+                    System.out.println("No Airplanes in hanger.");
+                    continue;
+                }
+                System.out.println("-".repeat(20));
+                System.out.println("AIRPLANE HANGER\n");
+                for (int i = 0; i < hanger.size(); i++) {
+                    System.out.println(i + 1 + ")" + hanger.get(i) + "\n");
+                }
+                System.out.println("-".repeat(20));
+            } else {
+                Airplane generatedAirplane = createAirplane();
+                hanger.add(generatedAirplane);
+                // Report data
+                System.out.println("\nCREATED AIRPLANE: \n" + generatedAirplane);
+
+            }
+        }
+
+        System.out.println("Thank you for using this program.");
+
+
+
+
+
+    }
+
+    private static Airplane createAirplane() {
 
         // Declare variables and call UI method to read input
         String userModel = UI.readString("What model plane would you like?");
@@ -18,9 +65,9 @@ public class Main {
         boolean planeMadeImmediately = UI.readBoolean("I would like my plane to be made immediately.");
 
         // Create instance of new object
-        Airplane userAirplane = new Airplane(userModel, userTailNum, userPassCap, userBudget, userRenewables, planeMadeImmediately);
+        return new Airplane(userModel, userTailNum, userPassCap, userBudget, userRenewables, planeMadeImmediately);
 
-        // Report data
-        System.out.println(userAirplane);
+
+
     }
 }
