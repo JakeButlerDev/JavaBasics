@@ -2,6 +2,7 @@ package com.butler.objectfactory;
 
 import jdk.swing.interop.SwingInterOpUtils;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UI {
@@ -67,6 +68,19 @@ public class UI {
         // ERROR HANDLING?? DEVELOP
         return playerList;
     }
+
+//    public static ArrayList<String> readArrayList(String value) {
+//
+//        while(true) {
+//            try {
+//                System.out.println("Enter your " + value);
+//                ArrayList<String> input = new ArrayList<>();
+//                int i = 0;
+//                ArrayList<String> input[i] = scanner.nextLine();
+//                return input;
+//            }
+//        }
+//    }
 
     public static boolean readBoolean(String question) {
         while (true) {
