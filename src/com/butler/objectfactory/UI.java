@@ -12,7 +12,6 @@ public class UI {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    // String, int, double, short, boolean
 
 //    public static String readString(String question) {
 //        System.out.println(question);

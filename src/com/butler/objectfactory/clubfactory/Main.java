@@ -12,7 +12,7 @@ public class Main {
         // Create new instance of ArrayList
         ArrayList<Club> league = new ArrayList<>();
         // Welcome message
-        System.out.println("Welcome to the soccer club directory.\n\n");
+        System.out.println("Welcome to the soccer club directory!\n\n");
         System.out.println("Enter the new club below:\n");
 
 
@@ -48,13 +48,13 @@ public class Main {
               else {
                   Club enteredClub = createClub();
                   league.add(enteredClub);
+                System.out.println("Data has been stored.");
             }
 
 
-            System.out.println("Thank you for using the Custom Club Database. 'Til next time!");
         }
 
-
+        System.out.println("Thank you for using the Custom Club Database. 'Til next time!");
 
     }
 
