@@ -49,7 +49,7 @@ public class Main {
             // Rewrite data in db with newly entered user data
 //            }
               else {
-                  Club enteredClub = createClub();
+                  Club enteredClub = Club.createClub();
                   league.add(enteredClub);
                 System.out.println("Data has been stored.");
             }
@@ -61,20 +61,5 @@ public class Main {
 
     }
 
-    private static Club createClub() {
 
-        // Declare variables and call UI method to read input
-        String name = UI.readString("Enter the club name.");
-        // Needed to use StringBuilder to dynamically add strings depending on number of players
-        StringBuilder players = UI.readStringList();
-        short year = UI.readShort("Enter the year this club was founded.", (short)1800, (short)2022);
-        byte goalsScored = UI.readByte("Enter how many goals this club has scored in its current season.", (byte)0, (byte)127);
-        byte goalsAgainst = UI.readByte("Enter how many goals have been scored against this club in its current season.", (byte)0, (byte)127);
-        int stadiumCap = UI.readInt("How many people can the club's stadium hold?", 100, 120_000);
-
-
-        // Return new instance of object
-        return new Club(name, players, year, goalsScored, goalsAgainst, stadiumCap);
-
-    }
 }
