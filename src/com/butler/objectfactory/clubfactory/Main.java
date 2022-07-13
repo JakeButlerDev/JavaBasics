@@ -44,6 +44,9 @@ public class Main {
 //            ^ else if (menuChoice == 2) {
 //                ???
             // Display text file or mySQL db with stored data
+            // Ask user which data they want to alter
+            // Locate data in db
+            // Rewrite data in db with newly entered user data
 //            }
               else {
                   Club enteredClub = createClub();
