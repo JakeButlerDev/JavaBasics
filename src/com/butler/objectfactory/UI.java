@@ -81,6 +81,42 @@ public class UI {
 //        }
 //    }
 
+    public static ArrayList<String> readListOfStrings(String question, int min, int max) {
+
+        ArrayList<String> responses = new ArrayList<>();
+        System.out.println(question);
+        System.out.println("Please enter at least " + min + " inputs, and at most " + max + " inputs.");
+
+        for (int i = 0; i < max; i++) {
+
+            String userInput = readString("\n(" + (i+1) + "/" + max + ")");
+            responses.add(userInput);
+            if (responses.size() == max) {
+                System.out.println("Max number of inputs have been recorded.");
+            } else if (responses.size() >= min && !readYesOrNo("Would you like to add more inputs?")) break;
+
+        }
+
+        System.out.println("Your responses have been recorded.");
+        return responses;
+
+
+    }
+
+    public static boolean readYesOrNo(String question) {
+
+        while (true) {
+
+            String userInput = readString(question + "\n(y/n): ");
+            char selection = userInput.toLowerCase().charAt(0);
+            if (selection == 'y') return true;
+            if (selection == 'n') return false;
+            System.out.println("Input must be y or n.");
+
+        }
+
+    }
+
     public static boolean readBoolean(String question) {
         while (true) {
             try  {
@@ -195,3 +231,34 @@ public class UI {
 
 
 }
+
+
+
+
+
+
+
+/* OOP NOTES
+
+Before OOP, we had Procedural Programming which divided a program into a set of functions. These functions can be interdependent, and if one breaks they all collapse.
+
+In OOP, we group like data together and call them Objects. When we write code in OOP, functions have fewer parameters and are easier to maintain.
+
+ENCAPSULATION
+Reduce complexity & increase reusability
+
+
+ABSTRACTION
+When the complexity of how a problem is solved is hidden, only necessary information is shown.
+Reduce complexity & isolate impact of change
+
+
+INHERITANCE
+Eliminate redundant code
+
+
+POLYMORPHISM
+Refactor complex switch/case statements
+
+
+ */
